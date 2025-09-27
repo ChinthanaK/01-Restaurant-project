@@ -1,4 +1,4 @@
-
+import { useState } from "react";
 import Header from "./components/Layout/Header";
 import MealsSummary from "./components/Meals/MealsSummary";
 import AvaliableMeals from "./components/Meals/AvaliableMeals";
@@ -12,12 +12,21 @@ function App() {
     {id:4, itemName:"Green Bowl", description:"Healthy... and green...", price:19.99}
   ]
 
+  const [shown, setShown] = useState(false);
+   const showCartHandler = () =>{
+    setShown(true);
+  }
+  const hideCartHandler =() =>{
+    setShown(false);
+  }
+ 
   return (
     <div>
-      <Header />
+      {shown && <Cart onClose={hideCartHandler}/>}
+      <Header onShowCart = {showCartHandler}/>
       <MealsSummary />
       <AvaliableMeals items={items}/>
-      <Cart />
+      
     </div>
   );
 }
