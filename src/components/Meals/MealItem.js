@@ -11,7 +11,7 @@ const MealItem = (props) => {
                 </div>
                 <form>
                     <label htmlFor="amount">Amount</label>
-                    <input type="number" name="amount" id="amount" />
+                    <input type="number" name="amount" id="amount" defaultValue='1' min='1' max='5'/>
                     <Button>+ Add</Button>
                 </form>
                 <hr />

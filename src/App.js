@@ -2,6 +2,7 @@
 import Header from "./components/Layout/Header";
 import MealsSummary from "./components/Meals/MealsSummary";
 import AvaliableMeals from "./components/Meals/AvaliableMeals";
+import Cart from "./components/Cart/Cart";
 function App() {
   
   const items = [
@@ -16,6 +17,7 @@ function App() {
       <Header />
       <MealsSummary />
       <AvaliableMeals items={items}/>
+      <Cart />
     </div>
   );
 }
