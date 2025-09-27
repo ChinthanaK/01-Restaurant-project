@@ -1,6 +1,6 @@
-//import React from 'react'
 import Card from '../UI/Card';
 import classes from "./AvaliableMeals.module.css";
+import MealItem from './MealItem';
 
 const AvaliableMeals = (props) => {
  
@@ -9,12 +9,7 @@ const AvaliableMeals = (props) => {
     <Card className= {classes.meals}>
           <ul>
         {props.items.map((item) =>{
-        return <li key={item.id}>
-                <h4>{item.itemName}</h4>
-                <p>{item.description}</p>
-                <span>${item.price.toFixed(2)}</span>
-                <hr />
-            </li>
+        return <MealItem key={item.id} itemName={item.itemName} description={item.description} price={item.price}/>
         })}
     </ul>
     </Card>

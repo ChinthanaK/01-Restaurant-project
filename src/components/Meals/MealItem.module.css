@@ -1,0 +1,38 @@
+.meal {
+  display: flex;
+  justify-content: space-between; /* push left + right apart */
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* left content should take remaining space */
+.meal > div {
+  flex: 1;
+}
+
+/* form should stay at far right */
+.meal form {
+  display: flex;
+  flex-direction: column;   /* stack Amount/input and button */
+  align-items: flex-end;    /* right-align contents */
+  gap: 0.5rem;
+  margin-left: auto;        /* push form all the way right */
+}
+
+.meal form label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.meal form input {
+  width: 3rem;
+  text-align: center;
+  padding: 4px 6px;
+  font-size: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
