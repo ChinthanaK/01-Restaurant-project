@@ -3,6 +3,7 @@ import Header from "./components/Layout/Header";
 import MealsSummary from "./components/Meals/MealsSummary";
 import AvaliableMeals from "./components/Meals/AvaliableMeals";
 import Cart from "./components/Cart/Cart";
+import CartProvider from "./store/CartProvider";
 function App() {
   
   const items = [
@@ -21,13 +22,13 @@ function App() {
   }
  
   return (
-    <div>
+    <CartProvider>
       {shown && <Cart onClose={hideCartHandler}/>}
       <Header onShowCart = {showCartHandler}/>
       <MealsSummary />
       <AvaliableMeals items={items}/>
       
-    </div>
+    </CartProvider>
   );
 }
 
