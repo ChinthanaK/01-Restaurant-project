@@ -14,7 +14,6 @@ const cartCtx = useContext(CartContext);
       price: props.price,
       amount: 1 
     });
-    console.log("hi");
   };
   return (<li className={classes.meal}>
                 <div>

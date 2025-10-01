@@ -9,7 +9,7 @@ const AvaliableMeals = (props) => {
     <Card className= {classes.meals}>
           <ul>
         {props.items.map((item) =>{
-        return <MealItem key={item.id} itemName={item.itemName} description={item.description} price={item.price}/>
+        return <MealItem key={item.id} id={item.id} itemName={item.itemName} description={item.description} price={item.price}/>
         })}
     </ul>
     </Card>
